@@ -31,6 +31,11 @@
 ### 12. Make a tmp folder: `mkdir tmp`
 ## SETUP END
 
+## FETCHING LATEST CHANGES
+### Prereqs: ACM-UPS repository remote
+### 1. Add remote: `git remote add upstream git@github.com:ACM-UPS/acmplatform.git`
+### 2. Fetch remote: `git fetch upstream`
+
 ## RUNNING SERVER & SHUTING DOWN SERVER
 ### Prereqs: a browser, terminal, typing skills.
 ### 1. Make sure your in the root folder `../acmplatform/`
