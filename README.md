@@ -16,15 +16,19 @@
 ## SETUP START
 ##### 1. Fork ACM-UPS Repository
 ##### 2. Go to forked repository and clone via SSH or HTTPS (We will be using SSH).
+
 ##### Prereqs: https://help.github.com/articles/generating-an-ssh-key/
 ##### 3. Clone: `git clone git@github.com:username/acmplatform.git`
 ##### 4. cd acmplatform
+
 ##### Prereqs: Python 2.7+ && pip 
 ##### 5. Install virtual environemnt: `pip install virtualenv`
 ##### 6. Check current packages: `pip freeze` - virtualenv=15.0.3
+
 ##### Prereqs: virtualenv
 ##### 7. Create virtual environment: `virtualenv acm`
 ##### 8. Activate virtual environment: `source ./acm/bin/activate`
+
 ##### Prereqs: (acm) should appear.
 ##### 9. Check current packages: `pip freeze` - virtualenv != exist
 ##### 10. Install requirements: `pip install -U -r requirements.pip`
@@ -43,6 +47,7 @@
 ##### 2. Run the Server: `python run.py`
 ##### 3. Open Browser and go to: `http://localhost:5000/`
 ##### 4. Browse until satisfied. 
+
 ##### Prereqs: terminal with server running
 ##### 5. Shut Server Down: `Ctrl + C`
 
