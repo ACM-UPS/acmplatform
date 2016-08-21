@@ -1,10 +1,11 @@
 ## Hello this is the acm website's platform for development.
 
 ## TEAM
-### Pres: Jesse
-### V.Pres: Thavy
-### Treas: Alex
-### ProMan: Patrick
+Jesse
+Thavy
+Alex
+Patrick
+Max
 
 ## Frameworks in place
 ### Python 
@@ -13,11 +14,11 @@
 ### more... (look in requirements.pip)
 
 ## SETUP START
-### 1. Fork ACM-UPS Repository
-### 2. Go to forked repository and clone via SSH or HTTPS (We will be using SSH).
-### Prereqs: https://help.github.com/articles/generating-an-ssh-key/
-### 3. Clone: `git clone git@github.com:username/acmplatform.git`
-### 4. cd acmplatform
+1. Fork ACM-UPS Repository
+2. Go to forked repository and clone via SSH or HTTPS (We will be using SSH).
+Prereqs: https://help.github.com/articles/generating-an-ssh-key/
+3. Clone: `git clone git@github.com:username/acmplatform.git`
+4. cd acmplatform
 ### Prereqs: Python 2.7+ && pip 
 ### 5. Install virtual environemnt: `pip install virtualenv`
 ### 6. Check current packages: `pip freeze` - virtualenv=15.0.3
