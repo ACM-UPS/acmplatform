@@ -2,9 +2,13 @@
 
 ## TEAM
 Jesse
+
 Thavy
+
 Alex
+
 Patrick
+
 Max
 
 ## Frameworks in place
