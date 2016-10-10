@@ -4,3 +4,4 @@ acm/
 ACM/
 .ACM/
 .tmp/
+*.pyc
