@@ -12,6 +12,8 @@ import datetime
 @app.route('/index')
 def index():
 	'''index route (main page)'''
-	return render_template('calendar.html',
-							title='Home')
+	return render_template('calendar.html', page='Home')
 
+@app.route('/about')
+def about():
+	return render_template('about.html', page='About')
