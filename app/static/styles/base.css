@@ -2,10 +2,15 @@ body {
 	margin: 0px;
 }
 
+header {
+	background-color: #e4d4ce;
+}
+
 ul {
 	list-style-type: none;
 	margin: 20px;
-	background-color: #ffffff
+	margin-bottom: 0px;
+	padding-bottom: 25px;
 }
 
 li {
@@ -43,9 +48,10 @@ hr {
 }
 
 #calendar {
-	margin: 0px;
+	margin-top: 0px;
 	background-color: #d9d9d9;
 	padding: 25px;
+	padding-top: 0px;
 }
 
 #contacts {
