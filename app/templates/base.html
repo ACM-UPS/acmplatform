@@ -12,17 +12,17 @@
 	<header>
 		<center><p>UPS-ACM</p></center>
 		<center><p>{{ page }}</p></center>
-		<div id='navigation_bar'>
-			<center><ul>
-				<li><a href="{{ url_for('index') }}">HOME</a></li>
-				<li><a href="{{ url_for('index') }}">NEWS</a></li>
-				<li><a href="{{ url_for('index') }}">CONTACT</a></li>
-				<li><a href="{{ url_for('about') }}">ABOUT</a></li>
-			</ul></center>
+		<div id='navbar'>
+			<nav>
+				<a href="{{ url_for('index') }}">HOME</a> 
+				<a href="{{ url_for('index') }}">NEWS</a> 
+				<a href="{{ url_for('index') }}">CONTACT</a> 
+				<a href="{{ url_for('about') }}">ABOUT</a>
+			</nav>
 		</div>
 	</header>
 	<main>
-		<div id='calendar'>
+		<div id='content'>
 			{% with messages = get_flashed_messages() %}
 			{% if messages %}
 			<ul>
@@ -33,7 +33,7 @@
 			<ul>
 				{% endif %}
 				{% endwith %}
-				<center>{% block content %}{% endblock %}</center>
+				<div id='block'>{% block content %}{% endblock %}</div>
 			</ul>
 		</div>
 	</main>
@@ -45,7 +45,7 @@
 				</p>
 				<p>
 					Contact information: 
-					<a href='mailto:lmfao@pugetsound.edu'>lmfao@pugetsound.edu
+					<a href='mailto:acm@pugetsound.edu'>acm@pugetsound.edu
 					</a>
 				</p>
 				<p>
