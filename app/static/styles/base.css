@@ -1,0 +1,102 @@
+body {
+	margin: 0px;
+}
+
+header {
+	background-color: #e4d4ce;
+}
+
+nav {
+	list-style-type: none;
+	margin-top: 17px;
+	padding-bottom: 0px;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+nav a {
+	text-decoration: none;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	color: #660000;
+	text-align: center;
+	padding: 20px;
+	margin: 5px 10px 0px 0px;
+}
+
+nav a:hover {
+	background-color: dbc5bd;
+}
+
+p {
+	font-family: 'UniversBold', 'Univers', 'sans-serif';
+	text-decoration: none;
+	font-size: 75px;
+	font-style: normal;
+	margin: 0px;
+}
+
+hr {
+	display: none;
+}
+
+#navbar {
+	vertical-align: middle;
+	text-align: center;
+	background-color: #e4d4ce;
+	box-shadow: 0 3px 7px #8e9597;
+	width: 100%;
+	height: 50px;
+}
+
+#head {
+	margin: 10px;
+}
+
+#content {
+	margin-top: 0px;
+	background-color: #d9d9d9;
+	padding: 0px;
+}
+
+#block {
+	padding: 20px;
+	text-align: center;
+}
+
+#contacts {
+	padding-left: 200px;
+}
+
+#upsacm {
+	margin-bottom: 10px;
+	font-family: serif;
+	padding-left: 0px;
+	font-size: 25px;
+}
+
+footer {
+	background-color: #000000;
+	padding: 50px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+footer p {
+	font-size: 20px;
+	font-family: sans-serif;
+	text-decoration: none;
+	color: #ffffff;
+	margin: 0;
+	padding-top: 25px;
+	padding-left: 40px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
+
+footer a {
+	font-size: 20px;
+	text-decoration: none;
+	color: #ffffff;
+}
