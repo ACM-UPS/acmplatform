@@ -12,18 +12,8 @@ import datetime
 @app.route('/index')
 def index():
 	'''index route (main page)'''
-	user = {'nickname': 'Jesse'} # fake user
-	posts = [ # fake array of posts
-		{
-			'author': {'nickname': 'John'},
-			'body': 'Beautiful day in portland'
-		},
-		{
-			'author': {'nickname': 'Susan'},
-			'body': 'The Avengers movie was so cool!'
-		}
-	]
-	return render_template('index.html',
-							title='Home',
-							user=user, 
-							posts=posts)
+	return render_template('calendar.html')
+
+@app.route('/about')
+def about():
+	return render_template('about.html', page='About')

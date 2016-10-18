@@ -27,7 +27,7 @@
 
 ##### Prereqs: virtualenv
 ##### 7. Create virtual environment: `virtualenv acm`
-##### 8. Activate virtual environment: `source ./acm/bin/activate`
+##### 8. Activate virtual environment: `source ./acm/scripts/activate`
 
 ##### Prereqs: (acm) should appear.
 ##### 9. Check current packages: `pip freeze` - virtualenv != exist
