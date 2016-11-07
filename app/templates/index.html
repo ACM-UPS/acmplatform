@@ -70,6 +70,28 @@
     </div>
   </div>
 </div>
+<!-- Calendar -->
+<div id="calendar">
+  <div class="container">
+    <div class="section-title text-center center">
+      <h2>Calendar</h2>
+      <hr>
+      <div id='calendar'>
+                        {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                        <ul>
+                            {% for message in messages %}
+                            <li>{{ message }} </li>
+                            {% endfor %}
+                        </ul>
+                        <ul>
+                            {% endif %}
+                            {% endwith %}
+                            <div id='block'>{% block content %}{% endblock %}</div>
+    </div>
+  </div>
+</div>
+
 <!-- About Section -->
 <div id="about">
   <div class="container">
