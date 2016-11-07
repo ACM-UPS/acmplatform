@@ -1,58 +1,25 @@
 <html>
-<head>
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/base.css') }}">
-	{% if title %}
-	<title>{{ title }} - ACM</title>
-	{% else %}
-	<title>Welcome to ACM</title>
-	{% endif %}
-</head>
-
-<body>
-	<header>
-		<center><p>UPS-ACM</p></center>
-		<center><p>{{ page }}</p></center>
-		<div id='navbar'>
-			<nav>
-				<a href="{{ url_for('index') }}">HOME</a> 
-				<a href="{{ url_for('index') }}">NEWS</a> 
-				<a href="{{ url_for('index') }}">CONTACT</a> 
-				<a href="{{ url_for('about') }}">ABOUT</a>
-			</nav>
-		</div>
-	</header>
-	<main>
-		<div id='content'>
-			{% with messages = get_flashed_messages() %}
-			{% if messages %}
-			<ul>
-				{% for message in messages %}
-				<li>{{ message }} </li>
-				{% endfor %}
-			</ul>
-			<ul>
-				{% endif %}
-				{% endwith %}
-				<div id='block'>{% block content %}{% endblock %}</div>
-			</ul>
-		</div>
-	</main>
-	<footer>
-		<section id='footer'>
-			<div id='contacts'>
-				<p id='upsacm'>
-					UPS-ACM
-				</p>
-				<p>
-					Contact information: 
-					<a href='mailto:acm@pugetsound.edu'>acm@pugetsound.edu
-					</a>
-				</p>
-				<p>
-					Phone: 123-456-7890
-				</p>
-			</div>
-		</section>
-	</footer>
-</body>
+  <head>
+    {% if title %}
+    <title>{{ title }} - ACM</title>
+    {% else %}
+    <title>Welcome to ACM</title>
+    {% endif %}
+  </head>
+  <body>
+    <div>UPS-ACM: 
+        <a href="{{ url_for('index') }}">Home</a>
+    </div>
+    <hr>
+    {% with messages = get_flashed_messages() %}
+    	{% if messages %}
+    		<ul>
+    		{% for message in messages %}
+    			<li>{{ message }} </li>
+    		{% endfor %}
+    		<ul>
+    	{% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+  </body>
 </html>

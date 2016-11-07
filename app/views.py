@@ -14,6 +14,3 @@ def index():
 	'''index route (main page)'''
 	return render_template('calendar.html')
 
-@app.route('/about')
-def about():
-	return render_template('about.html', page='About')
