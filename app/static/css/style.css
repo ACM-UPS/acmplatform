@@ -185,6 +185,7 @@ hr {
 }
 #intro .intro-body .intro-text {
 	font-size: 18px;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; /*lmao black outline white font color do u even reddit*/
 }
 
 @media(min-width:768px) {
@@ -218,10 +219,16 @@ hr {
 .section-title h2, .section-title.center h2 {
 	margin-bottom: 30px;
 }
+
+/*Calendar Section*/
+#calendar{
+	padding: 140px 0;
+	background: #ffffff;
+}
 /* About Section */
 #about {
 	padding: 140px 0;
-	background: #f6f6f6;
+	background: #e6e6e6;
 }
 #about .about-text {
 	margin-left: 10px;
@@ -286,7 +293,7 @@ hr {
 	transition: all 0.5s;
 }
 /* Gallery Section */
-#works {
+#projects {
 	padding: 120px 0;
 	background: #f6f6f6;
 }
@@ -408,7 +415,7 @@ ol.type li a:hover {
 .hover-bg:hover .hover-text {
 	opacity: 1;
 }
-#works i.fa {
+#projects i.fa {
 	font-size: 20px;
 	padding: 5px;
 	color: #F4D03F;
