@@ -76,17 +76,7 @@
       <h2>Calendar</h2>
       <hr>
       <div id='calendar'>
-                        {% with messages = get_flashed_messages() %}
-                        {% if messages %}
-                        <ul>
-                            {% for message in messages %}
-                            <li>{{ message }} </li>
-                            {% endfor %}
-                        </ul>
-                        <ul>
-                            {% endif %}
-                            {% endwith %}
-                            <div id='block'>{% block content %}{% endblock %}</div>
+        {{ calendar|safe }}
     </div>
   </div>
 </div>
