@@ -10,4 +10,5 @@ import datetime
 
 @app.route('/')
 def index():
+	'''index route (main page)'''
 	return render_template('index.html')
