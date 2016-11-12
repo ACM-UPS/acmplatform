@@ -13,4 +13,3 @@ import datetime
 def index():
 	'''index route (main page)'''
 	return render_template('calendar.html')
-
