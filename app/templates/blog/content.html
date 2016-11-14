@@ -1,0 +1,26 @@
+{% block content %}
+<div id="posts">
+  <div class="section-title text-center center">
+    <br>
+    <h2>The UPS-ACM Blog</h2>
+    <hr>
+  </div>
+    <div class="container">
+      {% for p in post %}
+        <div class="row">
+          <div class="col-md-12">
+            <div class="about-text">
+              <h4>{{ p.title }}</h4>
+            </div>
+          </div>
+          <div class="col-md-6"><img src="img/jurassic_park_toy_story.jpg" class="img-responsive"></div>
+          <div class="col-md-6">
+            <div class="about-text">
+              <div>{{ p.content }}</div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+</div>
+{% endblock %}
