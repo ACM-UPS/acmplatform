@@ -1,4 +1,4 @@
-[ACM site](acm.pugetsound.edu)
+![ACM site](acm.pugetsound.edu)
 
 ## Hello this is the acm website's platform for development.
 
