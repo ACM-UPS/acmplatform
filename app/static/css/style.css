@@ -595,3 +595,9 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	font-size: 5em;
 }
 }
+
+#sidebar-wrapper {
+	float: right;
+	margin: 20px;
+	padding: 20px;
+}
