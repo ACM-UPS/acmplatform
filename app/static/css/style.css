@@ -222,7 +222,6 @@ hr {
 
 /*Calendar Section*/
 #calendar{
-	padding: 140px 0;
 	background: #ffffff;
 }
 /* About Section */
@@ -265,7 +264,6 @@ hr {
 }
 /* Services Section */
 #services {
-	padding: 140px 0;
 	background: url(../img/services-bg.jpg);
 	background-size: cover;
 	background-attachment: fixed;
@@ -422,7 +420,6 @@ ol.type li a:hover {
 }
 /* Team Section */
 #team {
-	padding: 140px 0;
 	background: #e6e6e6;
 }
 img.img-thumbnail.team-img {
@@ -472,7 +469,7 @@ img.img-thumbnail.team-img {
 /* Contact Section */
 #contact {
 	padding: 120px 0 40px 0;
-	background: #f6f6f6;
+	background: ;
 }
 #contact .contact-item {
 	padding: 10px;
@@ -594,4 +591,9 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 #intro .intro-body H1 {
 	font-size: 5em;
 }
+}
+
+.content_panel {
+	padding: 140px 0;
+
 }
