@@ -10,6 +10,6 @@ def index():
 	return render_template('index.html')
 
 @app.route('/<var>')
-def 404(var):
+def pageNotFound(var):
 	'''POSSIBLE: 404 page ROUTE'''
 	return '''<h1>404 Page</h1>'''
