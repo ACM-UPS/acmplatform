@@ -2,15 +2,8 @@
 
 ## Hello this is the acm website's platform for development.
 
-## TEAM
-#####Jesse
-#####Thavy
-#####Alex
-#####Patrick
-#####Max
-
 ## Frameworks in place
-##### Python 
+##### Python
 ##### Flask
 ##### Jinja2
 ##### more... (look in requirements.pip)
@@ -23,7 +16,7 @@
 ##### 3. Clone: `git clone git@github.com:username/acmplatform.git`
 ##### 4. cd acmplatform
 
-##### Prereqs: Python 2.7+ && pip 
+##### Prereqs: Python 2.7+ && pip
 ##### 5. Install virtual environemnt: `pip install virtualenv`
 ##### 6. Check current packages: `pip freeze` - virtualenv=15.0.3
 
@@ -48,15 +41,14 @@
 ##### 1. Make sure your in the root folder `../acmplatform/`
 ##### 2. Run the Server: `python run.py`
 ##### 3. Open Browser and go to: `http://localhost:5000/`
-##### 4. Browse until satisfied. 
+##### 4. Browse until satisfied.
 
 ##### Prereqs: terminal with server running
 ##### 5. Shut Server Down: `Ctrl + C`
 
-## NOTES 
+## NOTES
 ##### app folder: (app) is where our website logic lives
-##### root folder (acmplatform) is where we run, update/backup the database and holds different types of platforms. 
+##### root folder (acmplatform) is where we run, update/backup the database and holds different types of platforms.
 ##### static folder (static) is where our css, images, anything static, live at.
 ##### templates folder: (templates) is where our html pages live at.
-##### tmp folder: (tmp) is where the cache lives (?doublecheck needed?) 
-
+##### tmp folder: (tmp) is where the cache lives (?doublecheck needed?)
