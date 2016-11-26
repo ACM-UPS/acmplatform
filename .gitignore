@@ -5,6 +5,3 @@ ACM/
 .ACM/
 .tmp/
 *.pyc
-.db_repository/
-db_repository/
-app.db
