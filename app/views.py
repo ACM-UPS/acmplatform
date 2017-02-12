@@ -7,6 +7,9 @@ from .models import User
 # TODO: base template needed
 
 @app.route('/')
+def plain():
+	return render_template('plain.html')
+
 @app.route('/index.html') # TODO: REMOVE LATER FROM HTML
 def index():
 	'''index route (main page)'''
