@@ -4,16 +4,20 @@ from .models import User
 
 # index view function supressed for brevity
 
-# TODO: base template needed
 
 @app.route('/')
-def plain():
-	return render_template('plain.html')
-
 @app.route('/index.html') # TODO: REMOVE LATER FROM HTML
 def index():
 	'''index route (main page)'''
 	return render_template('index.html')
+
+@app.route('/about')
+def about():
+	return render_template('about.html') # TODO replace w/ 'about.html'
+
+@app.route('/team')
+def team():
+	return render_template('team.html') # TODO replace w/ 'team.html'
 
 @app.route('/<var>')
 def pageNotFound(var):
@@ -22,19 +26,29 @@ def pageNotFound(var):
 
 # ALL BELOW NEED REVAMP
 
-@app.route('/blog-leftsidebar.html') # TODO remove ".html"
+@app.route('/blog-leftsidebar') 
 def blog_leftsidebar():
 	return render_template('blog-leftsidebar.html')
 
-@app.route('/blog-rightsidebar.html') # TODO Remove ".html"
+@app.route('/blog-rightsidebar') 
 def blog_rightsidebar():
 	return render_template('blog-rightsidebar.html')
 
-@app.route('/comingsoon.html') # TODO Remove ".html"
+@app.route('/post-leftsidebar') # TODO Remove ".html"
+def left_sidebar():
+	return render_template('post-leftsidebar.html')
+
+@app.route('/post-rightsidebar') # TODO Remove ".html"
+def right_sidebar():
+	return render_template('post-rightsidebar.html')
+
+# below more revamp
+
+@app.route('/comingsoon') 
 def comingsoon():
 	return render_template('comingsoong.html')
 
-@app.route('/components.html') # TODO Remove ".html"
+@app.route('/components.html') 
 def components():
 	return render_template('components.html')
 
@@ -46,13 +60,7 @@ def contact():
 def fullwidth():
 	return render_template('fullwidth.html')
 
-@app.route('/left-sidebar.html') # TODO Remove ".html"
-def left_sidebar():
-	return render_template('left-sidebar.html')
 
-@app.route('/right-sidebar.html') # TODO Remove ".html"
-def right_sidebar():
-	return render_template('right-sidebar.html')
 
 @app.route('/login.html') # TODO Remove ".html"
 def login():
