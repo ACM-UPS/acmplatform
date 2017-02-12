@@ -46,7 +46,7 @@ def right_sidebar():
 
 @app.route('/comingsoon') 
 def comingsoon():
-	return render_template('comingsoong.html')
+	return render_template('comingsoon.html')
 
 @app.route('/components.html') 
 def components():
@@ -59,8 +59,6 @@ def contact():
 @app.route('/fullwidth.html') # TODO Remove ".html"
 def fullwidth():
 	return render_template('fullwidth.html')
-
-
 
 @app.route('/login.html') # TODO Remove ".html"
 def login():
