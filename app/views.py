@@ -13,11 +13,11 @@ def index():
 
 @app.route('/about')
 def about():
-	return render_template('about') # TODO replace w/ 'about.html'
+	return render_template('about.html') # TODO replace w/ 'about.html'
 
 @app.route('/team')
 def team():
-	return render_template('team') # TODO replace w/ 'team.html'
+	return render_template('team.html') # TODO replace w/ 'team.html'
 
 @app.route('/<var>')
 def pageNotFound(var):
@@ -48,7 +48,7 @@ def right_sidebar():
 def comingsoon():
 	return render_template('comingsoon.html')
 
-@app.route('/components.html')
+@app.route('/components')
 def components():
 	return render_template('components.html')
 
