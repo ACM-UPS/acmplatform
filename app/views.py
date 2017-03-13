@@ -11,8 +11,8 @@ mail = Mail()
 app.config["MAIL_SERVER"] = "smtp.gmail.com"
 app.config["MAIL_PORT"] = 465
 app.config["MAIL_USE_SSL"] = True
-app.config["MAIL_USERNAME"] = 'SENDER@EMAIL.COM'
-app.config["MAIL_PASSWORD"] = 'PASSWORD'
+app.config["MAIL_USERNAME"] = 'upsacm.contact@gmail.com'
+app.config["MAIL_PASSWORD"] = '$upsacm2017'
 
 mail.init_app(app)
 
@@ -71,7 +71,7 @@ def contact():
 			flash('All field are required.')
 			return render_template('contact.html', form=form)
 		else:
-			msg = Message(form.subject.data, sender='SENDER@EMAIL.COM', recipients=['RECEIVER@EMAIL.COM'])
+			msg = Message(form.subject.data, sender='upsacm.contact@gmail.com', recipients=['acm@pugetsound.edu'])
 			msg.body = """
 			From : %s <%s>
 			%s
