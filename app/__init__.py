@@ -4,8 +4,10 @@ import os
 from config import basedir,SQLALCHEMY_DATABASE_URI,SECRET_KEY
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
+from flask.ext.mail import Message, Mail
 
 app = Flask(__name__, static_url_path='', static_folder='static')
+
 
 from app.blog.views import mod
 app.register_blueprint(blog.views.mod, url_prefix='/blog')
