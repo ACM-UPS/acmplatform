@@ -15,8 +15,42 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
-				<h2>Contact us <small>get in touch with us by filling form below</small></h2>
-				<hr class="colorgraph">
+
+				{% if success %}
+					<p>Thank you for your message. We'll get back to you shortly.</p>
+				</div>
+			</div>
+		</div>
+				{% else %}
+					<h2>Contact us <small>get in touch with us by filling form below</small></h2>
+					<hr class="colorgraph">
+
+				{% for message in form.name.errors %}
+				<div class="flash">{{ message }}</div>
+				{% endfor %} {% for message in form.email.errors %}
+				<div class="flash">{{ message }}</div>
+				{% endfor %} {% for message in form.subject.errors %}
+				<div class="flash">{{ message }}</div>
+				{% endfor %} {% for message in form.message.errors %}
+				<div class="flash">{{ message }}</div>
+				{% endfor %}
+
+				<form action="{{ url_for('contact') }}" method=post>
+					{{ form.hidden_tag() }}
+
+					<!-- {{ form.name.label }} -->
+					{{ form.name(placeholder="Your Name")}}
+
+					<!-- {{ form.email.label }} -->
+					{{ form.email(placeholder="Your Email") }}
+
+					<!-- {{ form.subject.label }} -->
+					{{ form.subject(placeholder="Subject") }}
+
+					<!-- {{ form.message.label }} -->
+					{{ form.message(placeholder="message") }} {{ form.submit(class="btn btn-theme btn-block btn-md") }}
+				</form>
+				<!--
 				<div id="sendmessage">Your message has been sent. Thank you!</div>
 				<div id="errormessage"></div>
 				<form action="" method="post" role="form" class="contactForm">
@@ -39,6 +73,8 @@
 
 					<div class="text-center"><button type="submit" class="btn btn-theme btn-block btn-md">Send Message</button></div>
 				</form>
+			-->
+
 				<hr class="colorgraph">
 
 			</div>
@@ -46,6 +82,6 @@
 	</div>
 </section>
 </div>
-<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a> {% endblock %}
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a> {% endif %} {% endblock %}
 
 <script src="contactform/contactform.js"></script>
