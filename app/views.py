@@ -30,10 +30,10 @@ def about():
 def team():
 	return render_template('team.html')
 
-@app.route('/<var>')
-def pageNotFound(var):
-	'''POSSIBLE: 404 page ROUTE'''
-	return render_template('404.html');
+# New 404 page using errorhandler
+@app.errorhandler(404)
+def page_not_found(e):
+	return render_template('404.html'), 404
 
 # ALL BELOW NEED REVAMP
 
