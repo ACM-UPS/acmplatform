@@ -16,6 +16,16 @@ app.config["MAIL_PASSWORD"] = '$upsacm2017'
 
 mail.init_app(app)
 
+app.url_map.strict_slashes = False
+
+@app.before_request
+def clear_trailing():
+	from flask import redirect, request
+
+	rp = request.path
+	if rp != '/' and rp.endswith('/'):
+		return redirect(rp[:-1])
+
 @app.route('/')
 @app.route('/index')
 def index():
@@ -34,6 +44,8 @@ def team():
 @app.errorhandler(404)
 def page_not_found(e):
 	return render_template('404.html'), 404
+
+
 
 # ALL BELOW NEED REVAMP
 
