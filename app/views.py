@@ -101,9 +101,9 @@ def fullwidth():
 def login():
 	return render_template('login.html')
 
-@app.route('/portfolio')
-def portfolio():
-	return render_template('portfolio.html')
+@app.route('/talks')
+def talks():
+	return render_template('talks.html')
 
 @app.route('/post-leftsidebar')
 def post_leftsidebar():
@@ -112,10 +112,6 @@ def post_leftsidebar():
 @app.route('/post-rightsidebar')
 def post_rightsidebar():
 	return render_template('post-rightsidebar.html')
-
-@app.route('/pricing-box')
-def pricing_box():
-	return render_template('pricing-box.html')
 
 @app.route('/register')
 def register():
