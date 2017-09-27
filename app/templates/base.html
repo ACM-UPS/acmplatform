@@ -26,6 +26,16 @@
 
 </head>
 
+<!-- active navigationbar item -->
+{% set navigation_bar = [
+    ('/', 'index', 'Home'),
+    ('/about', 'about', 'About Us'),
+    ('/talks', 'talks', 'Talks'),
+    ('/blog-leftsidebar', 'blog', 'Blog'),
+    ('/contact/', 'contact', 'Contact'),
+] -%}
+{% set active_page = active_page|default('index') -%}
+
 <!-- Body  -->
 <body>
 
@@ -44,12 +54,13 @@
                 </div>
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">
-                        <li class="dropdown active">
-							<a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Home <i class="fa fa-angle-down"></i></a>
+                    	{% for href,id,caption in navigation_bar %}
+                        <li {% if id == active_page %} class="active" {% endif %}><a href="{{ href|e }}">{{ caption|e }}</a></li>
+                        	<!--
+							<a href="/" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Home <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
                                 <li><a href="/about">About Us</a></li>
                                 <li><a href="/team">Meet the Team</a></li>
-
                             </ul>
 
 						</li>
@@ -66,7 +77,6 @@
 										<li><a href="left-sidebar">Left sidebar</a></li>
 										<li><a href="comingsoon">Coming soon</a></li>
 										<li><a href="search-result">Search result</a></li>
-										<li><a href="404">404</a></li>
 										<li><a href="register">Register</a></li>
 										<li><a href="login">Login</a></li>
 									</ul>
@@ -82,7 +92,8 @@
 								<li><a href="/post-leftsidebar">Post left sidebar</a></li>
                             </ul>
 						</li>
-                        <li><a href="contact">Contact</a></li>
+                        <li><a href="contact">Contact</a></li> -->
+                        {% endfor %}
                     </ul>
                 </div>
             </div>
