@@ -26,6 +26,16 @@
 
 </head>
 
+<!-- active navigationbar item -->
+{% set navigation_bar = [
+    ('/', 'index', 'Home'),
+    ('/about', 'about', 'About Us'),
+    ('/talks', 'talks', 'Talks'),
+    ('/blog-leftsidebar', 'blog', 'Blog'),
+    ('/contact/', 'contact', 'Contact'),
+] -%}
+{% set active_page = active_page|default('index') -%}
+
 <!-- Body  -->
 <body>
 
@@ -44,12 +54,13 @@
                 </div>
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">
-                        <li class="dropdown active">
-							<a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Home <i class="fa fa-angle-down"></i></a>
+                    	{% for href,id,caption in navigation_bar %}
+                        <li {% if id == active_page %} class="active" {% endif %}><a href="{{ href|e }}">{{ caption|e }}</a></li>
+                        	<!--
+							<a href="/" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Home <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
                                 <li><a href="/about">About Us</a></li>
                                 <li><a href="/team">Meet the Team</a></li>
-
                             </ul>
 
 						</li>
@@ -58,7 +69,6 @@
                             <ul class="dropdown-menu">
                                 <li><a href="typography">Typography</a></li>
                                 <li><a href="components">Components</a></li>
-								<li><a href="pricing-box">Pricing box</a></li>
 								<li class="dropdown-submenu">
 									<a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown">Pages</a>
 									<ul class="dropdown-menu">
@@ -67,14 +77,13 @@
 										<li><a href="left-sidebar">Left sidebar</a></li>
 										<li><a href="comingsoon">Coming soon</a></li>
 										<li><a href="search-result">Search result</a></li>
-										<li><a href="404">404</a></li>
 										<li><a href="register">Register</a></li>
 										<li><a href="login">Login</a></li>
 									</ul>
 								</li>
                             </ul>
                         </li>
-                        <li><a href="portfolio">Portfolio</a></li>
+                        <li><a href="talks">Talks</a></li>
                         <li class="dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Blog <i class="fa fa-angle-down"></i></a>
 							<ul class="dropdown-menu">
                                 <li><a href="/blog-rightsidebar">Blog right sidebar</a></li>
@@ -83,7 +92,8 @@
 								<li><a href="/post-leftsidebar">Post left sidebar</a></li>
                             </ul>
 						</li>
-                        <li><a href="contact">Contact</a></li>
+                        <li><a href="contact">Contact</a></li> -->
+                        {% endfor %}
                     </ul>
                 </div>
             </div>
@@ -106,7 +116,7 @@
 					 1500 N WARNER ST<br>
 					 Tacoma, WA 98416 </address>
 					<p>
-						<i class="icon-phone"></i>010-101-0101<br>
+						<!--<i class="icon-phone"></i>010-101-0101<br>-->
 						<i class="icon-envelope-alt"></i> acm@pugetsound.edu
 					</p>
 				</div>
@@ -158,6 +168,7 @@
 						<p>ACM-UPS - All Right Reserved</p>
 					</div>
 				</div>
+				<!-- social networks 
 				<div class="col-lg-6">
 					<ul class="social-network">
 						<li><a href="#" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
@@ -167,6 +178,7 @@
 						<li><a href="#" data-placement="top" title="Google plus"><i class="fa fa-google-plus"></i></a></li>
 					</ul>
 				</div>
+				-->
 			</div>
 		</div>
 	</div>
